@@ -1,12 +1,20 @@
 <form action="/create_new_post" method="post">
-  <input type="text" name="post[title]" placeholder="Please enter your post title..." value="<%= @post.title %>">
+  <label for="post-title">Post Title:</label>
   <br/>
-  <input type="text" name="post[text]" placeholder="Tell us a little more about what you're offering...">
+  <input id="post-title"type="text" name="post[title]" placeholder="Please enter your post title...">
   <br/>
-  <input type="text" name="post[price]" placeholder="How much you want, dude?">
+  <label for="post-text">Post Text:</label>
   <br/>
-  <input type="email" name="post[email]" placeholder="name@yourdomain.com so we can contact you!">
-  <input type="hidden" name="category_id" value="<%= @category.id %>">
+  <input id="post-text"type="text" name="post[text]" placeholder="Tell us a little more about what you're offering...">
+  <br/>
+  <label for="post-price">Price:</label>
+  <br/>
+  <input id="post-price"type="text" name="post[price]" placeholder="How much you want, dude?">
+  <br/>
+  <label for="post-email">Email Address:</label>
+  <br/>
+  <input id="post-email"type="email" name="post[email]" placeholder="name@yourdomain.com so we can contact you!">
+  <input type="hidden" name="category_id">
   <input type="hidden" name='post[key]' value="<%= (0...8).map{(65+rand(26)).chr}.join %>">
   <br/>
   <input type="submit" value="SEND IT IN">

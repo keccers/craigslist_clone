@@ -12,8 +12,8 @@ a {
   text-decoration: none;
 }
 
-h1 {
-  font-size: 60px;
+a:hover {
+  background-color:   #DBFFFF;
 }
 
 th {
@@ -21,6 +21,8 @@ th {
 }
 
 input {
+  margin: 20px 0;
+  padding: 5px 0;
   width: 600px;
 }
 
@@ -39,7 +41,12 @@ input {
 
 #header h1 {
   display: inline;
+  font-size: 60px;
   width: 400px;
+}
+
+#header a:hover {
+  background-color: transparent;
 }
 
 #header span {
@@ -53,24 +60,43 @@ input {
 
 /*Content*/
 #content {
+  font-size: 20px;
   padding: 20px 20px;
   text-align: center;
 }
 
 #content ul {
   list-style-type: none;
+  padding: 0;
 }
 
+#content li {
+  margin: 10px 0;
+}
+
+
+/*Home Page*/
+
+
+/*Category Page*/
+#category-page-var {
+  color: #006363;
+  font-size: 22px;
+  text-decoration: underline;
+  text-transform: capitalize;
+}
+
+/*Post Page*/
 
 /*Footer*/
 #footer {
   background-color: #222;
   color: #fff;
   font-weight: 700;
-  padding: 20px 0px 0px 0px;
+  padding: 10px 0px 0px 0px;
   text-transform: uppercase;
 }
 
-#footer a {
-
+#footer a:hover {
+  background-color: transparent;
 }

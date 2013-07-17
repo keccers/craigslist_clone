@@ -1,10 +1,7 @@
-<span class="category-head">Category:</span><h2><%= @category.title %></h2>
-
-<p><%= @category.description %></p>
-
+<span class="category-head">Browse all posts in <span id="category-page-var"><%= @category.title %></span> or <a href="/<%= @category.id %>/post/new">create your own post about <%= @category.title %>.</a></span>
 
 <ul>
   <% @posts.each do |post| %>
-    <li><%= post.title %></li>
+    <li><a href="/<%= @category.id %>/<%= post.id %>"><%= post.title %></a></li>
   <% end %>
 </ul>
