@@ -1,0 +1,25 @@
+<form action="/create_new_post" method="post">
+  <input type="text" name="post[title]" placeholder="Please enter your post title..." value="<%= @post.title %>">
+  <br/>
+  <input type="text" name="post[text]" placeholder="Tell us a little more about what you're offering...">
+  <br/>
+  <input type="text" name="post[price]" placeholder="How much you want, dude?">
+  <br/>
+  <input type="email" name="post[email]" placeholder="name@yourdomain.com so we can contact you!">
+  <input type="hidden" name="category_id" value="<%= @category.id %>">
+  <input type="hidden" name='post[key]' value="<%= (0...8).map{(65+rand(26)).chr}.join %>">
+  <br/>
+  <input type="submit" value="SEND IT IN">
+</form>
+
+ 
+ <!--  <input type="radio" name="post[:category_id]" value="1">bikes</br>
+  <input type="radio" name="post[:category_id]" value="2">cars <br>
+  <input type="radio" name="post[:category_id]" value="3">casual encounters</br>
+  <input type="radio" name="post[:category_id]" value="4">books</br>
+  <input type="radio" name="post[:category_id]" value="5">jobs <br>
+  <input type="radio" name="post[:category_id]" value="6">apartments</br>
+  <input type="radio" name="post[:category_id]" value="7">rideshare</br>
+  <input type="radio" name="post[:category_id]" value="8">pets <br>  
+  <input type="radio" name="post[:category_id]" value="9">barter</br>
+  <input type="radio" name="post[:category_id]" value="10">haiku</br> -->

@@ -34,5 +34,14 @@ end
 
 get '/:category/:post_id/edit' do
 
+  if params[:key] == Post.find(params[:post_id]).key
+    @category = Category.find_by_title(params[:category])
+    @post = Post.find(params[:post_id])
+ 
+    erb :edit_post
+  else
+    redirect '/'
+  end
 end
+
 

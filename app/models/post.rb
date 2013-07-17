@@ -1,7 +1,5 @@
 class Post < ActiveRecord::Base
   belongs_to :category
 
-  validates :title, presence: true
-  validates :text, presence: true
-  validates :email, presence: true
+  validates_presence_of :title, :text, :email, :key
 end
