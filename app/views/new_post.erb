@@ -1,4 +1,4 @@
-<form action="/create_new_post" method="post">
+<form action="/<%= @category.id %>/create_new_post" method="post">
   <label for="post-title">Post Title:</label>
   <br/>
   <input id="post-title"type="text" name="post[title]" placeholder="Please enter your post title...">

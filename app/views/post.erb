@@ -1,7 +1,10 @@
-<!-- <div class="new">
-    show edit url, success message
-</div> -->
+<% if session[:id] == @post.id %>
+  <%= erb :_url, layout: false %>
+<% end %>
+
 <h1><%= @post.title %></h1>
 <h2>$<%= @post.price %>.00</h2>
 <p><%= @post.text %></p>
+
+
 

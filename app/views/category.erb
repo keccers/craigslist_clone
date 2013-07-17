@@ -2,6 +2,6 @@
 
 <ul>
   <% @posts.each do |post| %>
-    <li><a href="/<%= @category.id %>/<%= post.id %>"><%= post.title %></a></li>
+    <li><a href="/<%= @category.title %>/<%= post.id %>"><%= post.title %></a></li>
   <% end %>
 </ul>
