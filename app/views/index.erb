@@ -1,7 +1,11 @@
 <div class="container">
-  <ul>
-    <% @categories.each do |category| %>
-      <li><%= category.title %></li>
-    <% end %>
-  </ul>
+  
+  <h2>Categories</h2>
+  <% if @categories %>
+    <ul>
+      <% @categories.each do |category| %>
+        <li><a href="/<%= category.title %>"><%= category.title %></a></li>
+      <% end %>
+    </ul>
+  <% end %>
 </div>
